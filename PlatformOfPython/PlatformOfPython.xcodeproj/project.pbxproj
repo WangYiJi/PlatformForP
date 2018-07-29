@@ -15,6 +15,8 @@
 		31B15DF8210D9D68001DD7D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B15DF6210D9D68001DD7D5 /* LaunchScreen.storyboard */; };
 		31B15DFB210D9D68001DD7D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B15DFA210D9D68001DD7D5 /* main.m */; };
 		31B15E05210D9D68001DD7D5 /* PlatformOfPythonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B15E04210D9D68001DD7D5 /* PlatformOfPythonUITests.m */; };
+		31B15E21210DA39B001DD7D5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B15E1F210DA39B001DD7D5 /* MainViewController.swift */; };
+		31B15E22210DA39B001DD7D5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31B15E20210DA39B001DD7D5 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		31B15E00210D9D68001DD7D5 /* PlatformOfPythonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatformOfPythonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B15E04210D9D68001DD7D5 /* PlatformOfPythonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformOfPythonUITests.m; sourceTree = "<group>"; };
 		31B15E06210D9D68001DD7D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B15E1E210DA39B001DD7D5 /* PlatformOfPython-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlatformOfPython-Bridging-Header.h"; sourceTree = "<group>"; };
+		31B15E1F210DA39B001DD7D5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		31B15E20210DA39B001DD7D5 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +70,7 @@
 		31B15DDC210D9D67001DD7D5 = {
 			isa = PBXGroup;
 			children = (
+				31B15E1D210DA38F001DD7D5 /* ViewController */,
 				31B15DE7210D9D67001DD7D5 /* PlatformOfPython */,
 				31B15E03210D9D68001DD7D5 /* PlatformOfPythonUITests */,
 				31B15DE6210D9D67001DD7D5 /* Products */,
@@ -104,6 +110,16 @@
 				31B15E06210D9D68001DD7D5 /* Info.plist */,
 			);
 			path = PlatformOfPythonUITests;
+			sourceTree = "<group>";
+		};
+		31B15E1D210DA38F001DD7D5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				31B15E1F210DA39B001DD7D5 /* MainViewController.swift */,
+				31B15E20210DA39B001DD7D5 /* MainViewController.xib */,
+				31B15E1E210DA39B001DD7D5 /* PlatformOfPython-Bridging-Header.h */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +171,7 @@
 				TargetAttributes = {
 					31B15DE4210D9D67001DD7D5 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					31B15DFF210D9D68001DD7D5 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -189,6 +206,7 @@
 				31B15DF8210D9D68001DD7D5 /* LaunchScreen.storyboard in Resources */,
 				31B15DF5210D9D68001DD7D5 /* Assets.xcassets in Resources */,
 				31B15DF0210D9D67001DD7D5 /* Main.storyboard in Resources */,
+				31B15E22210DA39B001DD7D5 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +228,7 @@
 				31B15DED210D9D67001DD7D5 /* ViewController.m in Sources */,
 				31B15DFB210D9D68001DD7D5 /* main.m in Sources */,
 				31B15DEA210D9D67001DD7D5 /* AppDelegate.m in Sources */,
+				31B15E21210DA39B001DD7D5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +384,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PlatformOfPython/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,6 +393,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexWong.PlatformOfPython;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ViewController/PlatformOfPython-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -381,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PlatformOfPython/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +413,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlexWong.PlatformOfPython;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ViewController/PlatformOfPython-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -396,6 +422,7 @@
 		31B15E0D210D9D68001DD7D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PlatformOfPythonUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -413,6 +440,7 @@
 		31B15E0E210D9D68001DD7D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PlatformOfPythonUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
